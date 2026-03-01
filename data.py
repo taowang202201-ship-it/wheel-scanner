@@ -102,7 +102,7 @@ def _to_datetime_value(value) -> Optional[datetime]:
     return None
 
 
-@st.cache_data(ttl=3600)
+@st.cache_data(ttl=300)
 def get_ticker_profile(ticker: str) -> dict:
     """
     Return profile dict:

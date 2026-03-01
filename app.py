@@ -189,6 +189,12 @@ default_watchlist_text = "\n".join(cfg.get("watchlist", ["NVDA", "SOFI", "TSLA"]
 default_cost_map = normalize_cost_basis_map(cfg.get("cost_basis_map", {}))
 
 with st.sidebar:
+    if st.button("Refresh Data", use_container_width=True):
+        st.cache_data.clear()
+        if "vix_refresh_token" in st.session_state:
+            st.session_state["vix_refresh_token"] = 0
+        st.rerun()
+
     st.header("Watchlist")
     watchlist_text = st.text_area(
         "每行一个 ticker（支持逗号分隔）",

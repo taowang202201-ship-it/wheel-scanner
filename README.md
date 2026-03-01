@@ -84,6 +84,8 @@
 - 导出：
   - 保存到 `outputs/recommendations_YYYYMMDD.csv`
   - 支持下载 CSV
+- 数据刷新：
+  - 侧边栏 `Refresh Data` 按钮会执行 `st.cache_data.clear()`，强制重新拉取 yfinance 数据
 
 ## 文件结构
 
