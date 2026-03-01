@@ -2,3 +2,26 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# Python
+.venv/
+env/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# macOS
+.DS_Store
+
+# Data / Logs
+*.csv
+*.log
+outputs/
+tmp/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Streamlit local secrets
+.streamlit/secrets.toml
